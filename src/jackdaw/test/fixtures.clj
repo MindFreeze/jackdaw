@@ -145,7 +145,7 @@
   (fn [t]
     (let [ok? (fn [x]
                 (and (not (= :timeout x))
-                     (= (:status 200))))
+                     (= 200 (:status x))))
 
           ready-check @(d/timeout!
                         (d/future
